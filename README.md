@@ -13,6 +13,9 @@ npm install
 npm run serve
 ```
 
-### 
+## demo
+
+![](./demo/demo.gif)
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
