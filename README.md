@@ -13,6 +13,10 @@ npm install
 npm run serve
 ```
 
+## Todo
+
+- 学习路由后，加上url跳转
+
 ## demo
 
 ![](./demo/demo.gif)
