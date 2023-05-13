@@ -1,18 +1,17 @@
 <template>
-  <div>
+  <div class="background">
     <slot></slot>
   </div>
 </template>
 
 <style scoped>
-div {
+.background {
   height: 100vh;
-  position: relative;
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.55),
-      rgb(34, 34, 34, 0.5)
+      rgba(52, 52, 52, 0.55),
+      rgba(69, 69, 69, 0.5)
     ),
-    url("../../assets/backgournd.jpg");
+    url("../../assets/background.jpg");
   background-size: cover;
   color: #fff;
 }

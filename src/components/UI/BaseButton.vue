@@ -1,52 +1,92 @@
 <template>
-  <button :class="mode">
+  <button v-if="!link" :class="[mode, { border: border }]">
     <slot></slot>
   </button>
+  <router-link v-else :to="to" :class="mode">
+    <slot> </slot>
+  </router-link>
 </template>
 
 <script>
 export default {
-  props: ["mode"],
+  props: {
+    mode: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    link: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    to: {
+      type: String,
+      required: false,
+      default: "/",
+    },
+    border: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+  },
 };
 </script>
 
 <style scoped>
-button {
+.border {
+  border-radius: 6px;
+}
+button,
+a {
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
   padding: 0.75rem 1.5rem;
   font-family: inherit;
-  background-color: #8ce99a;
-  border: 1px solid #8ce99a;
-  color: #484848;
+  background-color: #a5d8ff;
+  border: 1px solid #a5d8ff;
+  color: #636363;
   cursor: pointer;
 }
 
+a:hover,
+a:active,
 button:hover,
 button:active {
-  background-color: #40c057;
-  border-color: #40c057;
-  color: #fff;
+  background-color: #4dabf7;
+  border-color: #4dabf7;
+  color: #ffffff;
 }
 
 .transparent {
+  font-size: 12px;
   background-color: transparent;
   border: none;
-  cursor: pointer;
-  color: #8ce99a;
+  color: #fff;
 }
 .transparent:hover,
 .transparent:active {
   background-color: transparent;
-  color: #40c057;
+  color: #a5d8ff;
+}
+
+.outline {
+  background-color: transparent;
+  border-color: #4dabf7;
+  color: #4dabf7;
 }
 
 .flat {
   background-color: transparent;
-  color: #8ce99a;
+  color: #a5d8ff;
   border: none;
 }
 
 .flat:hover,
-.flat:active {
-  background-color: #c3fae8;
+.flat:active .outline:hover,
+.outline:active {
+  background-color: #a5d8ff;
 }
 </style>
