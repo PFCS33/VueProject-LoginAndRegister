@@ -261,7 +261,7 @@ form {
   align-items: center;
   column-gap: 8px;
 
-  padding: 36px;
+  padding: 32px;
   padding-left: 0;
 }
 .icon {
@@ -273,8 +273,8 @@ form {
   grid-column: 1/-1;
 }
 input {
-  height: 36px;
-  font-size: 14px;
+  height: 32px;
+  font-size: 12px;
 }
 label {
   justify-self: end;

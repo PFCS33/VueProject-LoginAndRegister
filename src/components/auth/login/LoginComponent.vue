@@ -113,7 +113,7 @@ img {
   display: flex;
   flex-direction: column;
 
-  padding: 36px;
+  padding: 32px;
   padding-bottom: 24px;
   justify-content: space-between;
   align-items: stretch;
@@ -129,7 +129,7 @@ img {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   align-self: center;
   margin-bottom: 32px;
   margin-top: 12px;

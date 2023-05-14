@@ -91,14 +91,14 @@ export default {
   display: flex;
   flex-direction: column;
 
-  padding: 42px 0;
-  padding-left: 24px;
-  padding-right: 32px;
+  padding: 38px 0;
+  padding-left: 20px;
+  padding-right: 28px;
 }
 
 h1 {
   align-self: center;
-  margin-bottom: 16px;
-  font-size: 3.2rem;
+  margin-bottom: 12px;
+  font-size: 2.6rem;
 }
 </style>

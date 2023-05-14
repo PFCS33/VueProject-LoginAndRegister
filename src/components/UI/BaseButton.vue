@@ -32,7 +32,7 @@ export default {
 <style scoped>
 button,
 a {
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   display: inline-block;
   padding: 0.75rem 1.5rem;

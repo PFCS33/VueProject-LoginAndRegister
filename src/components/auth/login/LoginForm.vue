@@ -154,7 +154,7 @@ form {
 
 .white-space {
   grid-column: 1/-1;
-  height: 42px;
+  height: 37px;
 }
 
 .base-button {
@@ -165,7 +165,7 @@ form {
 }
 .error-msg {
   grid-column: 2/-1;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #e6fcf5;
 }
 
@@ -175,11 +175,9 @@ form {
 .invalid {
   /* border-color: #c92a2a; */
 }
-label {
-  font-size: 1.5rem;
-}
+
 input {
-  height: 36px;
-  font-size: 15px;
+  height: 32px;
+  font-size: 14px;
 }
 </style>

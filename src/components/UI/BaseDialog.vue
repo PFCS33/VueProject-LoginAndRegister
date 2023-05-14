@@ -105,8 +105,8 @@ export default {
 /* 其他正常设置 */
 dialog {
   position: fixed;
-  padding: 12px;
-  top: 30vh;
+  padding: 10px;
+  top: 32vh;
   left: 36%;
   width: 30%;
 
@@ -118,11 +118,11 @@ dialog {
 
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 
 .text {
-  font-size: 14px;
+  font-size: 10px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -130,9 +130,9 @@ dialog {
 }
 header {
   color: #000;
-  font-size: 12px;
+  font-size: 11px;
 
-  padding-bottom: 12px;
+  padding-bottom: 6px;
   border-bottom: 3px solid #a5d8ff;
 }
 
