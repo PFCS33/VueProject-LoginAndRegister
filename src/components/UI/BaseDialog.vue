@@ -133,6 +133,7 @@ header {
   font-size: 11px;
 
   padding-bottom: 6px;
+  margin-bottom: 4px;
   border-bottom: 3px solid #a5d8ff;
 }
 

@@ -12,14 +12,14 @@
     </base-dialog>
     <base-dialog :show="submitSuccess" title="成功" @close="confirmSuccess">
       <template #default>
-        <p>登录成功，前往主页!</p>
+        <p>验证通过，登录成功</p>
       </template>
       <template #action>
         <BaseButton
           mode="outline"
-          class="message-button"
+          class="message-button success-button"
           @click="confirmSuccess"
-          >确定</BaseButton
+          >前往主页!</BaseButton
         >
       </template>
     </base-dialog>
@@ -126,6 +126,10 @@ img {
 
 .message-button {
   border-radius: 6px;
+}
+.success-button {
+  font-size: 8px;
+  justify-content: center;
 }
 
 h1 {
