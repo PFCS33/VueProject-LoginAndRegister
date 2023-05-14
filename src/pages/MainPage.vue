@@ -11,26 +11,31 @@
       </template>
     </base-dialog>
     <div class="content-box">
-      <BaseButton class="add-button">添加项目</BaseButton>
-      <div v-if="isLoading" class="spinner">
-        <BaseSpinner></BaseSpinner>
+      <div class="button-box">
+        <BaseButton class="add-button">添加项目</BaseButton>
+        <BaseButton class="add-button" @click="refresh">刷新</BaseButton>
       </div>
-      <ul v-else-if="hasProject" class="project-box">
-        <ProjectItem
-          class="project-item"
-          v-for="project in projects"
-          :key="project.projectId"
-          :projectId="project.projectId"
-          :leaderId="project.leaderId"
-          :projectName="project.projectName"
-          :leaderName="project.leaderName"
-          :projectUrl="project.projectUrl"
-          :process="project.process"
-        ></ProjectItem>
-      </ul>
-      <BaseCard v-else class="prompt"
-        >现在还没有关联项目，赶快创建/加入一个吧！</BaseCard
-      >
+      <transition name="projects" mode="out-in">
+        <div v-if="isLoading" class="spinner">
+          <BaseSpinner></BaseSpinner>
+        </div>
+        <ul v-else-if="hasProject" class="project-box">
+          <ProjectItem
+            class="project-item"
+            v-for="project in projects"
+            :key="project.projectId"
+            :projectId="project.projectId"
+            :leaderId="project.leaderId"
+            :projectName="project.projectName"
+            :leaderName="project.leaderName"
+            :projectUrl="project.projectUrl"
+            :process="project.process"
+          ></ProjectItem>
+        </ul>
+        <BaseCard v-else class="prompt"
+          >现在还没有关联项目，赶快创建/加入一个吧！</BaseCard
+        >
+      </transition>
     </div>
   </MainBackground>
 </template>
@@ -81,6 +86,9 @@ export default {
     confirmError() {
       this.error = null;
     },
+    refresh() {
+      this.loadProjects("1");
+    },
   },
   created() {
     this.loadProjects("1");
@@ -89,6 +97,10 @@ export default {
 </script>
 
 <style scoped>
+.button-box {
+  display: flex;
+  gap: 8px;
+}
 .prompt {
   padding: 24px;
 }
@@ -123,5 +135,28 @@ export default {
 }
 .spinner {
   margin-top: 32px;
+}
+
+.projects-enter-from {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.projects-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.projects-enter-to,
+.projects-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.projects-leave-active {
+  transition: all 0.3s ease-in;
 }
 </style>

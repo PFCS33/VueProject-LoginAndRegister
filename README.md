@@ -25,6 +25,10 @@ npm run serve
 
 ![](./demo/demo-pic.png)
 
+- 加入项目管理界面
+
+![20230514194458_rec_](C:\Users\11731\AppData\Roaming\LarkShell\screenshot\20230514194458_rec_.gif)
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).

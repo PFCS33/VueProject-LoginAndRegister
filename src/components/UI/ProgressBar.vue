@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .progress {
   display: flex;
   justify-content: center;
