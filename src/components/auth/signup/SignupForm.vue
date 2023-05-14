@@ -6,7 +6,7 @@
         <p>请再次检查输入</p>
       </template>
       <template #action>
-        <BaseButton mode="outline" border="true" @click="confirmError"
+        <BaseButton mode="outline" class="message-button" @click="confirmError"
           >确定</BaseButton
         >
       </template>
@@ -240,6 +240,9 @@ export default {
 </script>
 
 <style scoped>
+.message-button {
+  border-radius: 6px;
+}
 form {
   display: grid;
   grid-template-columns: auto 1fr;

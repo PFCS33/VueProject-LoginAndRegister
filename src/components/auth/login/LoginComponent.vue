@@ -5,7 +5,7 @@
         <p>{{ error }}</p>
       </template>
       <template #action>
-        <BaseButton mode="outline" border="true" @click="confirmError"
+        <BaseButton mode="outline" class="message-button" @click="confirmError"
           >确定</BaseButton
         >
       </template>
@@ -15,7 +15,10 @@
         <p>登录成功，前往主页!</p>
       </template>
       <template #action>
-        <BaseButton mode="outline" border="true" @click="confirmSuccess"
+        <BaseButton
+          mode="outline"
+          class="message-button"
+          @click="confirmSuccess"
           >确定</BaseButton
         >
       </template>
@@ -119,6 +122,10 @@ img {
   display: flex;
 
   justify-content: center;
+}
+
+.message-button {
+  border-radius: 6px;
 }
 
 h1 {

@@ -5,7 +5,7 @@
       <p>请再次检查输入</p>
     </template>
     <template #action>
-      <BaseButton mode="outline" border="true" @click="confirmError"
+      <BaseButton mode="outline" class="message-button" @click="confirmError"
         >确定</BaseButton
       >
     </template>
@@ -167,6 +167,10 @@ form {
   grid-column: 2/-1;
   margin-bottom: 30px;
   color: #e6fcf5;
+}
+
+.message-button {
+  border-radius: 8px;
 }
 .invalid {
   /* border-color: #c92a2a; */

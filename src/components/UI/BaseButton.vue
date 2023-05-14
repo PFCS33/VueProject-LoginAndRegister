@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!link" :class="[mode, { border: border }]">
+  <button v-if="!link" :class="mode">
     <slot></slot>
   </button>
   <router-link v-else :to="to" :class="mode">
@@ -25,19 +25,11 @@ export default {
       required: false,
       default: "/",
     },
-    border: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
   },
 };
 </script>
 
 <style scoped>
-.border {
-  border-radius: 6px;
-}
 button,
 a {
   font-size: 15px;
