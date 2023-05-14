@@ -21,5 +21,10 @@ npm run serve
 
 ![](./demo/demo.gif)
 
+最新版界面：
+
+![](./demo/demo-pic.png)
+
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).

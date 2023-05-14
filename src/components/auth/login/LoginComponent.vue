@@ -111,12 +111,13 @@ img {
   flex-direction: column;
 
   padding: 36px;
+  padding-bottom: 24px;
   justify-content: space-between;
   align-items: stretch;
 }
 .footer-button-box {
   display: flex;
-  margin-top: 24px;
+
   justify-content: center;
 }
 
@@ -124,6 +125,6 @@ h1 {
   font-size: 3rem;
   align-self: center;
   margin-bottom: 32px;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 </style>
