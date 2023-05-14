@@ -37,6 +37,7 @@ router.beforeEach(function (to, from, next) {
   } else if (to.meta.requiredUnAuth && store.getters.isLoggedin) {
     next("/main");
   } else {
+    console.log(store.getters.userId);
     next();
   }
 });

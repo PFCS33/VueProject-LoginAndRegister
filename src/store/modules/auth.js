@@ -2,7 +2,7 @@ export default {
   state() {
     return {
       //当前登录用户id,可以判断当前用户是否登录
-      usreId: null,
+      userId: 1212,
       //如果服务器有针对用户访问权限的限制数据，可通过登录时返回对应的token来进行认证
       token: null,
     };
@@ -25,8 +25,12 @@ export default {
     },
   },
   actions: {
+    async changePassword(_context, payload) {
+      //TODO:修改密码的通信
+      console.log(payload);
+    },
     async signup(_context, payload) {
-      //注册服务通信
+      //TODO:注册服务通信
       const url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAvQfseAowXnTM8ZLKWdE4t9Z2QuWEAKEI";
 
@@ -52,7 +56,7 @@ export default {
       }
     },
     async login(context, payload) {
-      //登录服务通信,由于用的是firebase的验证测试，登录方式是邮箱，所以先暂时硬编码，只是为了测试前端页面显示
+      //TODO: 登录服务通信,由于用的是firebase的验证测试，登录方式是邮箱，所以先暂时硬编码，只是为了测试前端页面显示
       const url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAvQfseAowXnTM8ZLKWdE4t9Z2QuWEAKEI";
       //向服务器发送登录数据

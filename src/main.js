@@ -7,14 +7,17 @@ import BaseButton from "./components/ui/BaseButton.vue";
 import BaseDialog from "./components/ui/BaseDialog.vue";
 import BaseSpinner from "./components/ui/BaseSpinner.vue";
 import InitialBackground from "./components/ui/InitialBackground.vue";
+import MainBackground from "./components/ui/MainBackground.vue";
 
 const app = createApp(App);
-app.use(router);
+
 app.use(store);
+app.use(router);
 app.component("BaseButton", BaseButton);
 app.component("BaseCard", BaseCard);
 app.component("BaseDialog", BaseDialog);
 app.component("BaseSpinner", BaseSpinner);
 app.component("InitialBackground", InitialBackground);
+app.component("MainBackground", MainBackground);
 
 app.mount("#app");

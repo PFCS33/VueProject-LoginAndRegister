@@ -1,5 +1,22 @@
 <template>
-  <h2>This is main page</h2>
+  <MainBackground>
+    <ul>
+      <ProjectItem></ProjectItem>
+    </ul>
+  </MainBackground>
 </template>
 
-<style scoped></style>
+<script>
+import ProjectItem from "../components/project/ProjectItem.vue";
+export default {
+  components: {
+    ProjectItem,
+  },
+};
+</script>
+
+<style scoped>
+ul {
+  list-style: none;
+}
+</style>

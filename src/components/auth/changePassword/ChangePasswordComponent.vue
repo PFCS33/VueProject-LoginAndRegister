@@ -12,7 +12,7 @@
     </base-dialog>
     <base-dialog :show="submitSuccess" title="成功" @close="confirmSuccess">
       <template #default>
-        <p>登录成功，前往主页!</p>
+        <p>密码修改成功，现在去登录吧!</p>
       </template>
       <template #action>
         <BaseButton mode="outline" border="true" @click="confirmSuccess"
@@ -23,38 +23,34 @@
     <base-dialog fixed :show="isLoading" title="验证中...">
       <base-spinner></base-spinner>
     </base-dialog>
-    <img alt="Logo" src="../../assets/card-pic.png" />
-    <div class="content">
-      <h1>BIT JUMP 项目管理系统</h1>
-      <LoginForm
-        @save-data="saveData"
-        :submitSuccess="submitSuccess"
-      ></LoginForm>
-      <BaseButton mode="transparent" @click="switchPage('SignupComponent')">
-        还没有账号?去注册
-      </BaseButton>
-    </div>
+    <h1>修改密码</h1>
+    <ChangePasswordForm
+      @save-data="saveData"
+      :submitSuccess="submitSuccess"
+    ></ChangePasswordForm>
+    <BaseButton mode="transparent" @click="switchPage('LoginComponent')"
+      >返回登陆</BaseButton
+    >
   </BaseCard>
 </template>
 
-<script>
-import LoginForm from "./LoginForm.vue";
-
+<script scoped>
+import ChangePasswordForm from "./ChangePasswordForm.vue";
 export default {
-  components: { LoginForm },
-  inject: ["switchPage"],
+  components: { ChangePasswordForm },
   data() {
     return {
-      isLoading: false,
-      submitSuccess: false,
       error: null,
+      submitSuccess: false,
+      isLoading: false,
     };
   },
+  inject: ["switchPage"],
   methods: {
     async saveData(data) {
       this.isLoading = true;
       try {
-        await this.$store.dispatch("login", data);
+        await this.$store.dispatch("changePassword", data);
         this.submitSuccess = true;
       } catch (error) {
         this.error = new Error(error.message);
@@ -66,7 +62,7 @@ export default {
     },
     confirmSuccess() {
       this.submitSuccess = false;
-      this.$router.replace("/main");
+      this.switchPage("LoginComponent");
     },
   },
 };
@@ -75,41 +71,28 @@ export default {
 <style scoped>
 .box {
   position: fixed;
-  left: 32%;
-  top: 20%;
+  left: 31%;
+  top: 10%;
 
-  width: 57%;
-  height: 60%;
-
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-
-  border: 1px solid #fff;
+  width: 40%;
+  height: 80%;
 
   background-image: linear-gradient(
-    rgba(185, 185, 185, 0.55),
-    rgba(157, 157, 157, 0.5)
+    rgba(215, 215, 215, 0.55),
+    rgba(215, 215, 215, 0.5)
   );
-}
 
-img {
-  border-radius: 12px 0 0 12px;
-  width: 43%;
-}
-.content {
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
 
-  padding: 36px;
-  justify-content: space-between;
-  align-items: stretch;
+  padding: 42px 0;
+  padding-left: 24px;
+  padding-right: 32px;
 }
+
 h1 {
-  font-size: 3rem;
   align-self: center;
-  margin-bottom: 32px;
-  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 3.2rem;
 }
 </style>

@@ -9,11 +9,12 @@
 </template>
 
 <script>
-import LoginComponent from "../components/login/LoginComponent.vue";
-import SignupComponent from "../components/signup/SignupComponent.vue";
+import LoginComponent from "../components/auth/login/LoginComponent.vue";
+import SignupComponent from "../components/auth/signup/SignupComponent.vue";
+import ChangePasswordComponent from "@/components/auth/changePassword/ChangePasswordComponent.vue";
 
 export default {
-  components: { LoginComponent, SignupComponent },
+  components: { LoginComponent, SignupComponent, ChangePasswordComponent },
   data() {
     return {
       activePage: "LoginComponent",
@@ -49,10 +50,10 @@ export default {
 }
 
 .compo-enter-active {
-  transition: all 0.25s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .compo-leave-active {
-  transition: all 0.25s ease-in;
+  transition: all 0.3s ease-in;
 }
 </style>
