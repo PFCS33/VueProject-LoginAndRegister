@@ -19,15 +19,17 @@ npm run serve
 
 ## demo
 
+- 初版1
+
 ![](./demo/demo.gif)
 
-最新版界面：
+- 初版2
 
 ![](./demo/demo-pic.png)
 
-- 加入项目管理界面
+- 最新版：加入项目管理界面
 
-![20230514194458_rec_](C:\Users\11731\AppData\Roaming\LarkShell\screenshot\20230514194458_rec_.gif)
+![](./demo/demo-pic2.gif)
 
 ### Customize configuration
 
