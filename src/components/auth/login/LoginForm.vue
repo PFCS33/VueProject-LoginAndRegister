@@ -148,36 +148,54 @@ export default {
 form {
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
-  column-gap: 1rem;
+  /* column-gap: 1rem; */
+  column-gap: 0.7vw;
+
+  /* -------------------------------------------------------------------------- */
+  /* 作为子元素的flex设置 */
+  flex: 3 3 auto;
+  /* margin: 0 3.2rem; */
+  margin: 0 2.7vw;
 }
 
 .white-space {
   grid-column: 1/-1;
-  height: 3.7rem;
+  /* height: 3.7rem; */
+  /* -------------------------------------------------------------------------- */
 }
 
 .base-button {
   grid-column: 1/-1;
 }
 .icon {
-  width: 2.4rem;
+  /* width: 2.4rem; */
+  width: 1.8vw;
 }
 .error-msg {
   grid-column: 2/-1;
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem; */
   color: #e6fcf5;
+
+  /* -------------------------------------------------------------------------- */
+  margin-bottom: auto;
 }
 
 .message-button {
   border-radius: 8px;
+  font-size: 1vw;
 }
 .invalid {
   /* border-color: #c92a2a; */
 }
 
 input {
-  height: 3.2rem;
-  font-size: 1.4rem;
+  /* height: 3.2rem; */
+  /* font-size: 1.4rem; */
+
+  /* -------------------------------------------------------------------------- */
+  height: 90%;
+  font-size: 1.05vw;
 }
 </style>

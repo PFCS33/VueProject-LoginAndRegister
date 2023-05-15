@@ -105,10 +105,10 @@ export default {
 /* 其他正常设置 */
 dialog {
   position: fixed;
-  padding: 10px;
+  padding: 1vw;
   top: 32vh;
-  left: 36%;
-  width: 30%;
+  left: 38%;
+  width: 26vw;
 
   z-index: 100;
   border-radius: 6px;
@@ -118,22 +118,27 @@ dialog {
 
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1vw;
 }
 
 .text {
-  font-size: 10px;
+  /* font-size: 10px; */
+  font-size: 0.8vw;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  /* gap: 8px; */
+  gap: 0.8vw;
   color: #495057;
 }
 header {
   color: #000;
   font-size: 11px;
+  font-size: 0.9vw;
 
-  padding-bottom: 6px;
-  margin-bottom: 4px;
+  /* padding-bottom: 6px; */
+  padding-bottom: 0.5vw;
+  /* margin-bottom: 4px; */
+  margin-bottom: 0.3vw;
   border-bottom: 3px solid #a5d8ff;
 }
 

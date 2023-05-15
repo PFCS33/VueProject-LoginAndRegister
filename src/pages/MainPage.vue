@@ -99,10 +99,12 @@ export default {
 <style scoped>
 .button-box {
   display: flex;
-  gap: 0.8rem;
+  /* gap: 0.8rem; */
+  gap: 0.6vw;
 }
 .prompt {
-  padding: 2.4rem;
+  /* padding: 2.4rem; */
+  padding: 2vw;
 }
 .add-button {
   border-color: #be4bdb;
@@ -110,7 +112,8 @@ export default {
   border-radius: 8px;
   align-self: flex-start;
   color: #fff;
-  padding: 0.3rem 0.8rem;
+  /* padding: 0.3rem 0.8rem; */
+  padding: 0.2vw 0.6vw;
 }
 
 .add-button:active,
@@ -122,19 +125,25 @@ export default {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  /* gap: 1.2rem; */
+  gap: 1vw;
 }
 .content-box {
   display: flex;
   flex-direction: column;
-  padding: 1.2rem 3.6rem;
-  padding-bottom: 5.2rem;
-  margin-right: 5rem;
-  gap: 1.2rem;
+  /* padding: 1.2rem 3.6rem; */
+  padding: 1vw 2.9vw;
+  /* padding-bottom: 5.2rem; */
+  padding-bottom: 4.5vw;
+  /* margin-right: 5rem; */
+  margin-right: 4.2vw;
+  /* gap: 1.2rem; */
+  gap: 1vw;
   overflow: auto;
 }
 .spinner {
-  margin-top: 3.2rem;
+  /* margin-top: 3.2rem; */
+  margin-top: 3vw;
 }
 
 .projects-enter-from {
