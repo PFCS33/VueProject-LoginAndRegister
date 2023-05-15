@@ -149,23 +149,23 @@ form {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  column-gap: 12px;
+  column-gap: 1rem;
 }
 
 .white-space {
   grid-column: 1/-1;
-  height: 37px;
+  height: 3.7rem;
 }
 
 .base-button {
   grid-column: 1/-1;
 }
 .icon {
-  width: 24px;
+  width: 2.4rem;
 }
 .error-msg {
   grid-column: 2/-1;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
   color: #e6fcf5;
 }
 
@@ -177,7 +177,7 @@ form {
 }
 
 input {
-  height: 32px;
-  font-size: 14px;
+  height: 3.2rem;
+  font-size: 1.4rem;
 }
 </style>

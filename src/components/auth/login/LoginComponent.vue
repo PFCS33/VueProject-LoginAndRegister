@@ -93,10 +93,10 @@ export default {
   height: 60%;
 
   display: flex;
-  gap: 10px;
+  gap: 1rem;
   justify-content: space-between;
 
-  border: 1px solid #fff;
+  border: 0.1rem solid #fff;
 
   background-image: linear-gradient(
     rgba(185, 185, 185, 0.55),
@@ -107,14 +107,16 @@ export default {
 img {
   border-radius: 12px 0 0 12px;
   width: 43%;
+  height: auto;
 }
 .content {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
 
-  padding: 32px;
-  padding-bottom: 24px;
+  padding: 3.2rem;
+  padding-bottom: 2.4rem;
+
   justify-content: space-between;
   align-items: stretch;
 }
@@ -128,14 +130,14 @@ img {
   border-radius: 6px;
 }
 .success-button {
-  font-size: 8px;
+  font-size: 0.8rem;
   justify-content: center;
 }
 
 h1 {
   font-size: 2.6rem;
   align-self: center;
-  margin-bottom: 32px;
-  margin-top: 12px;
+  margin-bottom: 3.5rem;
+  margin-top: 1.2rem;
 }
 </style>

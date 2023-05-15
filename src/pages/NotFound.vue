@@ -16,12 +16,12 @@
   width: 30%;
   height: 30%;
   left: 35%;
-  padding: 36px;
+  padding: 3.6rem;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 3.6rem;
 }
 p {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 </style>
