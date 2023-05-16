@@ -6,8 +6,10 @@ import ManagePage from "./pages/ManagePage.vue";
 import JoinedPage from "./pages/JoinedPage.vue";
 import NotFound from "./pages/NotFound.vue";
 import store from "./store/index.js";
+
 const router = createRouter({
   history: createWebHistory(),
+  base: "/admin",
   routes: [
     {
       path: "/",
